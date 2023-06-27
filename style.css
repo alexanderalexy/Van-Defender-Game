@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,400;0,500;0,600;0,700;1,700&display=swap');
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+
+
+h1{
+    color: #FAFF06;
+    font-size: 4rem;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #FAFF06;
+    display: inline;
+    
+}
+
+span {
+    font-size: 2rem;
+    display: inline;
+   
+}
+
+
+
+
+
+#game-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    width: 800px;
+    height: 600px;
+    background-image: url('assets/origbig\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-container {
+    display: none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 2px #FAFF06 ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    
+
+}
+
+#game-screen {
+    display: none;
+    align-content: center;
+    overflow: hidden;
+    position: relative;
+    background-image: url('assets/gamefield.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 600px;
+  
+}
+
+#game-end {
+    display: none;
+}
+
+#game-win {
+    display: none;
+}
+
+#game-intro p {
+    font-size: 18px;
+    
+}
+
+body button {
+
+    width: 230px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: black;
+    font-size: 16px;
+    border: solid 2px #FAFF06;
+    color:#FAFF06;
+    box-shadow: rgba(255, 255, 6, 0.4);
+}
+
+body button:hover{
+
+    width: 230px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #FAFF06;;
+    font-size: 16px;
+    border: solid 2px black;
+    color: black;
+    box-shadow: rgba(255, 255, 6, 0.2);
+}
+
