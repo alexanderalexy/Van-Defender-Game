@@ -5,10 +5,8 @@ class Game {
         this.gameEndScreen = document.getElementById('game-end');
         this.gameWinScreen = document.getElementById('game-win')
         this.status = document.getElementById('game-container');
-        this.line = document.getElementById('game-container2');
         this.player = new Player(this.gameScreen);
         this.attackers = [];
-        //New
         this.shots = [];
         this.gameOver = false;
         this.win = false;
@@ -37,7 +35,7 @@ gameLoop() {
     this.attackers.forEach( (attacker) => {
         attacker.move();
     })
-    if (this.animateId % 180 === 0) {
+    if (this.animateId % 130 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
 
@@ -53,51 +51,61 @@ gameLoop() {
     }
 
 }
-/*
-        this.shots.forEach( (shot) => {
-        shot.move();
-        )}
 
- */
-
-    
-  
 
 
 update() {
+   
     this.player.move();
     const attackersToKeep = [];
    this.attackers.forEach(attacker => {
         attacker.move();
-    // collide    
-    if (this.player.didCollide(attacker)  ) {
+    // collide    new
+    function playCol() {
+        let audio = new Audio('./assets/col.wav')
+        audio.play();
+      }
+    if (this.player.didCollide(attacker)) {
+        playCol();
         attacker.element.remove();
-        this.lives -= 10;
-        lives.textContent = parseInt(lives.textContent) - 10 + '%';
-        console.log(this.lives)
-    } else if(attacker.top > this.gameScreen.offsetHeight) {
         this.score += 1;
         score.textContent = parseInt(score.textContent) + 1 ;
+        
+    } 
+    else if(attacker.top > this.gameScreen.offsetHeight) {
+       // this.score += 1;
+       this.lives -=25;
+       lives.textContent = parseInt(lives.textContent) - 25 + '%';
+       console.log(this.lives)
+        // score.textContent = parseInt(score.textContent) + 1 ;
     } else {
         attackersToKeep.push(attacker);
     }
     })
     this.attackers = attackersToKeep; 
-    }
+    
 
 
-/*
-   if( this.lives < = 0 ) {
+
+   if( this.lives <= 0 ) {
         this.endGame();
         this.gameOver = true;
+        console.log(lost)
     }
 
+
+    else if(this.score == 20) {
+        this.winGame();
+        this.win = true;
+        
+        
+      }
+}
  
     endGame() {
         this.player.element.remove();
         this.attackers.forEach(attacker => attacker.element.remove());
     
-        
     
         // Hide game screen
         this.gameScreen.style.display = "none";
@@ -105,20 +113,18 @@ update() {
         this.gameEndScreen.style.display = "flex";
       }
 
-      if(this.score = 5) {
-        this.winGame();
-        this.win = true;
-      }
+     
 
       winGame() {
         this.player.element.remove();
         this.attackers.forEach(attacker => attacker.element.remove());
 
         // Hide game screen
-          this.gameScreen.style.display = "none";
-        // Show end game screen
+        this.gameScreen.style.display = "none";
+        // Show win game screen
         this.gameWinScreen.style.display = "flex";
+        
       }
-   */
+   
 }
 

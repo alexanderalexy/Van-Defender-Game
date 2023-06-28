@@ -1,5 +1,5 @@
 class Player {
-    constructor(gameScreen, bulletController) {
+    constructor(gameScreen) {
         this.gameScreen = gameScreen;
         this.width = 80;
         this.height = 140;
@@ -33,6 +33,10 @@ class Player {
             this.left = this.gameScreen.offsetWidth - this.width - 50;
         } 
 
+        if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
+          this.top = this.gameScreen.offsetHeight - this.height - 10;
+          }
+
         
         this.updatePosition();
 
@@ -42,6 +46,7 @@ class Player {
 
     updatePosition() {
         this.element.style.left = `${this.left}px`;
+        this.element.style.top = `${this.top}px`
     }
 
     

@@ -3,11 +3,11 @@ class Attackers {
         this.gameScreen = gameScreen;
         this.left = Math.floor(Math.random() * 300 + 70);
         this.top = -80;
-        this.width = 40;
-        this.height= 40;
+        this.width = 80;
+        this.height= 80;
         this.element = document.createElement('img');
 
-        this.element.src = './assets/placeholer.png';
+        this.element.src = './assets/alien2.png';
         this.element.style.position = 'absolute';
 
         this.element.style.width = `${this.width}px`;

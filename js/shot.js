@@ -24,7 +24,8 @@ class Shots {
     }
 
 move() {
-    this.top += 3;
+    // Moves up ??
+    this.top -= 3;
 
     this.updatePosition();
 }
