@@ -33,7 +33,7 @@ gameLoop() {
     this.update();
 
   
-    if (this.animateId % 80 === 0) {
+    if (this.animateId % 30 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
 
@@ -70,8 +70,16 @@ update() {
         score.textContent = parseInt(score.textContent) + 1 ;
         
     } 
+
+    
+
     else if(attacker.top > this.gameScreen.offsetHeight) {
-       // this.score += 1;
+        function lost() {
+            let audio = new Audio('./assets/lost.wav')
+            audio.play();
+          }
+
+          lost()
        this.lives -=25;
        lives.textContent = parseInt(lives.textContent) - 25 + '%';
        console.log(this.lives)

@@ -3,12 +3,7 @@ window.addEventListener('load', () => {
     const restartButton = document.getElementById("restart-button");
     const restartButtonTwo = document.getElementById("restart-button-two");
 
-    function mainMel() {
-      let audio = new Audio('./assets/main.wav')
-      audio.play();
-    }
-
-    mainMel();
+    
    
  
     let game;
@@ -30,16 +25,16 @@ window.addEventListener('load', () => {
 
           switch (key) {
             case "ArrowLeft":
-              game.player.directionX = -1;
+              game.player.directionX = -10;
               break;    
             case "ArrowUp":
-              game.player.directionY = -1;
+              game.player.directionY = -10;
               break;
             case "ArrowRight":
-              game.player.directionX = 1;
+              game.player.directionX = 10;
               break;
             case "ArrowDown": 
-              game.player.directionY = 1;
+              game.player.directionY = 10;
               break;
 
           }
@@ -90,12 +85,20 @@ window.addEventListener('load', () => {
     function btn() {
       let audio = new Audio('./assets/btn.wav')
       audio.play();
+
     }
+
+    function mainMel() {
+      let audio = new Audio('./assets/main.wav')
+      audio.play();
+    }
+
+    
 
     startButton.addEventListener('click', function () {
         startGame();
         btn();
-        
+        mainMel();
         
         
       })

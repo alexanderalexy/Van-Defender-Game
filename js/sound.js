@@ -32,4 +32,11 @@
     let audio = new Audio('./assets/main.wav')
     audio.play();
   }
+
+      function lost() {
+    let audio = new Audio('./assets/lost.wav')
+    audio.play();
+  }
+
+
   */

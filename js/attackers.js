@@ -22,7 +22,7 @@ class Attackers {
     }
 
 move() {
-    this.top += 2;
+    this.top += 10;
 
     this.updatePosition();
 }
