@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const startButton = document.getElementById("start-button");
-
+ 
     let game;
 
     function startGame() {
@@ -48,15 +48,15 @@ window.addEventListener('load', () => {
         }
       })
       
+// shots with mouse
+     document.addEventListener('mousedown', mouseDown);
 
- //     document.addEventListener('mousedown', mouseDown);
-
- //     function mouseDown(e){
- //       if(game) {
- //         console.log('fire');
- //         this.shootPreesed = true;
-//      }
-//      }
+    function mouseDown(e){
+       if(game) {
+         console.log('fire');
+       
+      }
+    }
 
     }
 
@@ -64,5 +64,7 @@ window.addEventListener('load', () => {
         startGame();
         
       })
+
+       
     
-});
+})

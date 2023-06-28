@@ -1,7 +1,6 @@
 class Player {
     constructor(gameScreen, bulletController) {
         this.gameScreen = gameScreen;
-        this.bulletController = bulletController;
         this.width = 80;
         this.height = 140;
         this.element = document.createElement('img');
@@ -20,6 +19,8 @@ class Player {
         this.element.style.left = `${this.left}px`
 
         this.gameScreen.appendChild(this.element);
+
+        
     }
 
     move() {
@@ -43,5 +44,21 @@ class Player {
         this.element.style.left = `${this.left}px`;
     }
 
+    
+  didCollide(attacker) {
+    const playerRect = this.element.getBoundingClientRect();
+    const attackerRect = attacker.element.getBoundingClientRect();
+
+    if (
+      playerRect.left < attackerRect.right &&
+      playerRect.right > attackerRect.left &&
+      playerRect.top < attackerRect.bottom &&
+      playerRect.bottom > attackerRect.top
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
    
 }
