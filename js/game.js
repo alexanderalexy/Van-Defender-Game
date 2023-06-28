@@ -33,7 +33,7 @@ gameLoop() {
     this.update();
 
   
-    if (this.animateId % 30 === 0) {
+    if (this.animateId % 25 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
 
@@ -57,7 +57,17 @@ update() {
     this.player.move();
     const attackersToKeep = [];
    this.attackers.forEach(attacker => {
-        attacker.move();
+    if(this.score >= 5) {
+        attacker.speed = 10;
+      } 
+    if(this.score >= 50 ) {
+        attacker.speed = 13;
+    }
+
+    if(this.score >= 75) {
+        attacker.speed = 15;
+    }
+    attacker.move();
     // collide    new
     function playCol() {
         let audio = new Audio('./assets/col.ogg')
@@ -80,8 +90,8 @@ update() {
           }
 
           lost()
-       this.lives -=25;
-       lives.textContent = parseInt(lives.textContent) - 25 + '%';
+       this.lives -=10;
+       lives.textContent = parseInt(lives.textContent) - 10 + '%';
        console.log(this.lives)
         // score.textContent = parseInt(score.textContent) + 1 ;
     } else {
@@ -100,12 +110,14 @@ update() {
     }
 
 
-    else if(this.score == 50) {
+    else if(this.score == 100) {
         this.winGame();
         this.win = true;
         
         
       }
+
+      
 }
  
     endGame() {

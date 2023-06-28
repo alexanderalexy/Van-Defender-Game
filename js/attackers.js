@@ -6,7 +6,7 @@ class Attackers {
         this.width = 80;
         this.height= 80;
         this.element = document.createElement('img');
-        this.imgArray = ['./assets/alien2.png', './assets/alien.png', './assets/pizza.png', './assets/planet.png'];
+        this.imgArray = ['./assets/alien2.png', './assets/alien.png', './assets/alien3.png'];
         this.element.src = this.imgArray[Math.floor(Math.random() * this.imgArray.length)];
         this.element.style.position = 'absolute';
 
@@ -18,11 +18,12 @@ class Attackers {
 
         this.gameScreen.appendChild(this.element);
         
+        this.speed = 8; 
 
     }
 
 move() {
-    this.top += 10;
+    this.top += this.speed;
 
     this.updatePosition();
 }
