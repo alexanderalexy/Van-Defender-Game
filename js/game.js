@@ -8,6 +8,8 @@ class Game {
         this.line = document.getElementById('game-container2');
         this.player = new Player(this.gameScreen);
         this.attackers = [];
+        //New
+        this.shots = [];
         this.gameOver = false;
         this.win = false;
         this.score = 0;
@@ -43,15 +45,23 @@ gameLoop() {
         
     } 
     if(this.win) {
-        
+
     }
     
     else {
         this.animateId = requestAnimationFrame (() => this.gameLoop());
     }
 
-    }
+}
+/*
+        this.shots.forEach( (shot) => {
+        shot.move();
+        )}
 
+ */
+
+    
+  
 
 
 update() {
@@ -60,24 +70,29 @@ update() {
    this.attackers.forEach(attacker => {
         attacker.move();
     // collide    
-    if (this.player.didCollide(attacker) /*|| this.line.didCollide(attacker)*/ ) {
+    if (this.player.didCollide(attacker)  ) {
         attacker.element.remove();
         this.lives -= 10;
+        lives.textContent = parseInt(lives.textContent) - 10 + '%';
         console.log(this.lives)
     } else if(attacker.top > this.gameScreen.offsetHeight) {
         this.score += 1;
+        score.textContent = parseInt(score.textContent) + 1 ;
     } else {
         attackersToKeep.push(attacker);
     }
     })
     this.attackers = attackersToKeep; 
     }
+
+
 /*
    if( this.lives < = 0 ) {
         this.endGame();
         this.gameOver = true;
     }
 
+ 
     endGame() {
         this.player.element.remove();
         this.attackers.forEach(attacker => attacker.element.remove());
@@ -102,7 +117,7 @@ update() {
         // Hide game screen
           this.gameScreen.style.display = "none";
         // Show end game screen
-        this.gameEndScreen.style.display = "flex";
+        this.gameWinScreen.style.display = "flex";
       }
    */
 }
