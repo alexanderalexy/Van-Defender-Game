@@ -33,7 +33,7 @@ gameLoop() {
     this.update();
 
   
-    if (this.animateId % 25 === 0) {
+    if (this.animateId % 28 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
 

@@ -25,16 +25,16 @@ window.addEventListener('load', () => {
 
           switch (key) {
             case "ArrowLeft":
-              game.player.directionX = -10;
+              game.player.directionX = -15;
               break;    
             case "ArrowUp":
-              game.player.directionY = -10;
+              game.player.directionY = -15;
               break;
             case "ArrowRight":
-              game.player.directionX = 10;
+              game.player.directionX = 15;
               break;
             case "ArrowDown": 
-              game.player.directionY = 10;
+              game.player.directionY = 15;
               break;
 
           }
