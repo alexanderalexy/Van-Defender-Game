@@ -3,8 +3,8 @@ class Attackers {
         this.gameScreen = gameScreen;
         this.left = Math.floor(Math.random() * 500 + 70);
         this.top = -80;
-        this.width = 60;
-        this.height= 60;
+        this.width = 65;
+        this.height= 65;
         this.element = document.createElement('img');
         this.imgArray = ['./assets/alien2.png', './assets/alien.png', './assets/alien3.png'];
         this.element.src = this.imgArray[Math.floor(Math.random() * this.imgArray.length)];
