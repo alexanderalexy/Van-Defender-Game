@@ -2,7 +2,7 @@
 
 body {
     font-family: 'IBM Plex Mono', monospace;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     
     
@@ -14,6 +14,7 @@ h1{
     color: #FAFF06;
     font-size: 4rem;
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: -0.1em;
 }
 
 p {
@@ -21,6 +22,7 @@ p {
     font-size: 1rem;
     color: #FAFF06;
     display: inline;
+    letter-spacing: 2px;
     
     
 }
@@ -48,16 +50,20 @@ span {
     background-image: url('assets/origbig\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    border: 5px solid #FAFF06;
+    border-radius: 4px;
 }
 
 #game-container {
     display: none;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.8);
-    border: solid 2px #FAFF06 ;
+    border-bottom: solid 5px #FAFF06 ;
     justify-content: space-between;
     align-items: center;
     padding: 0 5% 0 5%;
+    z-index: 1;
+    border-radius: 4px;
     
 
 }
@@ -72,6 +78,8 @@ span {
     background-size: cover;
     width: 800px;
     height: 600px;
+    border: 5px solid #FAFF06;
+    border-radius: 4px;
   
 }
 
@@ -86,6 +94,8 @@ span {
     background-image: url('assets/gameover.png');
     background-repeat: no-repeat;
     background-size: cover;
+    border: 5px solid #FAFF06;
+    border-radius: 4px;
 }
 
 
@@ -100,6 +110,8 @@ span {
     background-image: url('assets/win.png');
     background-repeat: no-repeat;
     background-size: cover;
+    border: 5px solid #FAFF06;
+    border-radius: 4px;
 }
 
 
@@ -110,6 +122,7 @@ span {
 
 body button {
 
+    margin-top: -40px;
     width: 230px;
     padding: 8px;
     border-radius: 4px;
@@ -118,6 +131,8 @@ body button {
     border: solid 2px #FAFF06;
     color:#FAFF06;
     box-shadow: rgba(255, 255, 6, 0.4);
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 body button:hover{
