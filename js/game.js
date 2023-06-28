@@ -32,9 +32,7 @@ class Game {
 gameLoop() {
     this.update();
 
-    this.attackers.forEach( (attacker) => {
-        attacker.move();
-    })
+  
     if (this.animateId % 80 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
@@ -62,7 +60,7 @@ update() {
         attacker.move();
     // collide    new
     function playCol() {
-        let audio = new Audio('./assets/col.wav')
+        let audio = new Audio('./assets/col.ogg')
         audio.play();
       }
     if (this.player.didCollide(attacker)) {
@@ -106,6 +104,12 @@ update() {
         this.player.element.remove();
         this.attackers.forEach(attacker => attacker.element.remove());
     
+        function end() {
+            let audio = new Audio('./assets/end.wav')
+            audio.play();
+          }
+
+          end();
     
         // Hide game screen
         this.gameScreen.style.display = "none";
@@ -118,7 +122,14 @@ update() {
       winGame() {
         this.player.element.remove();
         this.attackers.forEach(attacker => attacker.element.remove());
+       
+        
+         function win() {
+          let audio = new Audio('./assets/win.wav')
+          audio.play();
+         }        
 
+         win();
         // Hide game screen
         this.gameScreen.style.display = "none";
         // Show win game screen

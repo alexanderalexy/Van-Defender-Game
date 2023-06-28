@@ -16,4 +16,20 @@
     audio.play();
   }
 
+
+   function end() {
+    let audio = new Audio('./assets/end.wav')
+    audio.play();
+  }
+
+
+   function win() {
+    let audio = new Audio('./assets/win.wav')
+    audio.play();
+  }
+
+    function main() {
+    let audio = new Audio('./assets/main.wav')
+    audio.play();
+  }
   */

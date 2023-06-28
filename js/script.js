@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     const restartButtonTwo = document.getElementById("restart-button-two");
 
     function mainMel() {
-      let audio = new Audio('./assets/mel.wav')
+      let audio = new Audio('./assets/main.wav')
       audio.play();
     }
 
@@ -95,6 +95,7 @@ window.addEventListener('load', () => {
     startButton.addEventListener('click', function () {
         startGame();
         btn();
+        
         
         
       })

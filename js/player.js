@@ -7,6 +7,7 @@ class Player {
         this.top = 450;
         this.left = 360;
         this.directionX = 0;
+        this.directionY = 0;
 
 
         this.element.src = './assets/vanForward.png';
