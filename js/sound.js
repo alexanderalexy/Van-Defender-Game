@@ -1,4 +1,4 @@
-function btn() {
+/*function btn() {
     let audio = new Audio('./assets/btn.wav')
     audio.play();
   }
@@ -15,3 +15,5 @@ function btn() {
     let audio = new Audio('./assets/mel.wav')
     audio.play();
   }
+
+  */

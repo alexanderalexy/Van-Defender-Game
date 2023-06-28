@@ -35,7 +35,7 @@ gameLoop() {
     this.attackers.forEach( (attacker) => {
         attacker.move();
     })
-    if (this.animateId % 130 === 0) {
+    if (this.animateId % 80 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
 
@@ -94,7 +94,7 @@ update() {
     }
 
 
-    else if(this.score == 20) {
+    else if(this.score == 50) {
         this.winGame();
         this.win = true;
         

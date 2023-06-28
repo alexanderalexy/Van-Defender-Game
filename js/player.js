@@ -25,12 +25,19 @@ class Player {
 
     move() {
         this.left += this.directionX;
+        this.top += this.directionY;
         if(this.left < 10) {
             this.left = 10;
         }
 
+        if(this.top < 0) {
+          this.top = 0;
+      }
+
+        
+
         if (this.left > this.gameScreen.offsetWidth - this.width - 50) {
-            this.left = this.gameScreen.offsetWidth - this.width - 50;
+            this.left = this.gameScreen.offsetheight - this.height - 50;
         } 
 
         if (this.top > this.gameScreen.offsetHeight - this.height - 10) {

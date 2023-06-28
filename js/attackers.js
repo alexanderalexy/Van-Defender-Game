@@ -1,7 +1,7 @@
 class Attackers {
     constructor(gameScreen) {
         this.gameScreen = gameScreen;
-        this.left = Math.floor(Math.random() * 300 + 70);
+        this.left = Math.floor(Math.random() * 430 + 70);
         this.top = -80;
         this.width = 80;
         this.height= 80;
@@ -22,7 +22,7 @@ class Attackers {
     }
 
 move() {
-    this.top += 3;
+    this.top += 2;
 
     this.updatePosition();
 }
