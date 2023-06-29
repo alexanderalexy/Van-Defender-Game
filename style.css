@@ -10,7 +10,8 @@ body {
     display: flex;
     align-items:  center;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 5%;
+ /*  position: relative; */
     
 }
 
@@ -41,9 +42,20 @@ span {
 }
 
 
-
-
-
+/*
+#overlay {
+ 
+    display: block;
+    align-content: center;
+    width: 808px;
+    height: 608;
+    background-color: rgba(255, 0, 0, 0.4 );
+    position: fixed;
+    z-index: 2;
+    position: absolute;
+    
+}
+*/
 
 #game-intro {
     display: flex;
@@ -59,6 +71,8 @@ span {
     border: 5px solid #FAFF06;
     border-radius: 4px;
     box-shadow:12px 12px 36px 4px rgba(229, 255, 0, 0.284);
+    z-index: 0;
+    
 }
 
 #game-container {
@@ -72,6 +86,7 @@ span {
     z-index: 1;
     border-radius: 4px;
     box-shadow:12px 12px 36px 4px rgba(229, 255, 0, 0.284);
+    
 
 }
 
@@ -104,6 +119,7 @@ span {
     border: 5px solid #FAFF06;
     border-radius: 4px;
     box-shadow:12px 12px 36px 4px rgba(229, 255, 0, 0.284);
+    
 }
 
 

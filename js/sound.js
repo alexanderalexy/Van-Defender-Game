@@ -39,4 +39,9 @@
   }
 
 
+      function alarm() {
+    let audio = new Audio('./assets/alarm.wav')
+    audio.play();
+  }
+
   */

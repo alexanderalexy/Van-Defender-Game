@@ -61,16 +61,16 @@ update() {
         attacker.speed = 10;
       } 
     if(this.score >= 50 ) {
-        attacker.speed = 13;
+        attacker.speed = 15;
     }
 
     if(this.score >= 75) {
-        attacker.speed = 15;
+        attacker.speed = 17;
     }
     attacker.move();
     // collide    new
     function playCol() {
-        let audio = new Audio('./assets/col.ogg')
+        let audio = new Audio('./assets/col.wav')
         audio.play();
       }
     if (this.player.didCollide(attacker)) {
@@ -99,6 +99,8 @@ update() {
     }
     })
     this.attackers = attackersToKeep; 
+    
+
     
 
 
