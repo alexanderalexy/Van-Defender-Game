@@ -70,7 +70,7 @@ update() {
     attacker.move();
     // collide    new
     function playCol() {
-        let audio = new Audio('./assets/col.wav')
+        let audio = new Audio('./sound/col.wav')
         audio.play();
       }
     if (this.player.didCollide(attacker)) {
@@ -85,7 +85,7 @@ update() {
 
     else if(attacker.top > this.gameScreen.offsetHeight) {
         function lost() {
-            let audio = new Audio('./assets/lost.wav')
+            let audio = new Audio('./sound/lost.wav')
             audio.play();
           }
 
@@ -127,7 +127,7 @@ update() {
         this.attackers.forEach(attacker => attacker.element.remove());
     
         function end() {
-            let audio = new Audio('./assets/end.wav')
+            let audio = new Audio('./sound/end.wav')
             audio.play();
           }
 
@@ -147,7 +147,7 @@ update() {
        
         
          function win() {
-          let audio = new Audio('./assets/win.wav')
+          let audio = new Audio('./sound/win.wav')
           audio.play();
          }        
 

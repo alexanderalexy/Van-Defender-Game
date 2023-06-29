@@ -83,13 +83,13 @@ window.addEventListener('load', () => {
     }
 
     function btn() {
-      let audio = new Audio('./assets/btn.wav')
+      let audio = new Audio('./sound/btn.wav')
       audio.play();
 
     }
 
     function mainMel() {
-      let audio = new Audio('./assets/main.wav')
+      let audio = new Audio('./sound/main.wav')
       audio.play();
     }
 
