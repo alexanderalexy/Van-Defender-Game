@@ -5,7 +5,7 @@
 ## Description
 This game is a simple reaction game . The task is to use a van to protect the inhabitants of a village behind you from an alien attack. The attacking aliens must be destroyed by ramming with the van and they must be prevented from passing the van.
 
-You win the game if you destroy 100 attackers. Easier said than done as her attacks are getting faster and faster. If 10 attackers manage to get past you, they kill all the villagers and you are game over.
+You win the game if you destroy 100 attackers. Easier said than done as the attacks are getting faster and faster. If 10 attackers manage to get past you, they kill all the villagers and you are game over.
 
 Control: Use the arrow keys on your keyboard. You will mainly need the right and left ones.
 
