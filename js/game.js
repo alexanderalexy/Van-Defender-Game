@@ -58,7 +58,7 @@ update() {
     const attackersToKeep = [];
    this.attackers.forEach(attacker => {
     if(this.score >= 5) {
-        attacker.speed = 10;
+        attacker.speed = 13;
       } 
     if(this.score >= 50 ) {
         attacker.speed = 15;
