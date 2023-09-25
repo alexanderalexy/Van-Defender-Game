@@ -1,7 +1,8 @@
 # VAN DEFENDER
 
 ![Game Screenshot](./assets/Van%20defender%20screen.png)
-[VAN DEFENDER](https://alexanderalexy.github.io/Van-Defender-Game/)
+
+[Let's play VAN DEFENDER](https://alexanderalexy.github.io/Van-Defender-Game/)
 
 ## Description
 VAN DEFENDER is a simple reaction game where your task is to use a van to protect the inhabitants of a village from an alien attack. The attacking aliens must be destroyed by ramming with the van, and you must prevent them from passing the van. To win the game, you need to destroy 100 attackers. However, be careful, as the attacks become faster and more intense over time. If 10 attackers manage to get past you, all the villagers will be killed, and the game is over.
