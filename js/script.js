@@ -2,9 +2,6 @@ window.addEventListener('load', () => {
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
     const restartButtonTwo = document.getElementById("restart-button-two");
-
-    
-   
  
     let game;
 
@@ -68,24 +65,11 @@ window.addEventListener('load', () => {
         }
       })
       
-// shots with mouse
-/*     document.addEventListener('mousedown', mouseDown);
-
-       function mouseDown(e){
-       if(game) {
-         console.log('fire');
-       
-      }
-    }
-
-*/
-
     }
 
     function btn() {
       let audio = new Audio('./sound/btn.wav')
       audio.play();
-
     }
 
     function mainMel() {
@@ -99,21 +83,12 @@ window.addEventListener('load', () => {
         startGame();
         btn();
         mainMel();
-        
-        
       })
-
-      
-
       restartButton.addEventListener('click', function () {
         location.reload();
         
     })
-
       restartButtonTwo.addEventListener('click', function () {
       location.reload();
-       
     })
-   
-     
 })

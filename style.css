@@ -10,12 +10,8 @@ body {
     display: flex;
     align-items:  center;
     flex-direction: column;
-    margin-top: 5%;
- /*  position: relative; */
-    
+    margin-top: 5%;    
 }
-
-
 
 h1{
     color: #FAFF06;
@@ -30,32 +26,13 @@ p {
     color: #FAFF06;
     display: inline;
     letter-spacing: 2px;
-    
-    
 }
 
 span {
     font-size: 2rem;
     display: inline;
     padding-left: 8px;
-   
 }
-
-
-/*
-#overlay {
- 
-    display: block;
-    align-content: center;
-    width: 808px;
-    height: 608;
-    background-color: rgba(255, 0, 0, 0.4 );
-    position: fixed;
-    z-index: 2;
-    position: absolute;
-    
-}
-*/
 
 #game-intro {
     display: flex;
@@ -71,8 +48,7 @@ span {
     border: 5px solid #FAFF06;
     border-radius: 4px;
     box-shadow:12px 12px 36px 4px rgba(229, 255, 0, 0.284);
-    z-index: 0;
-    
+    z-index: 0;    
 }
 
 #game-container {
@@ -86,8 +62,6 @@ span {
     z-index: 1;
     border-radius: 4px;
     box-shadow:12px 12px 36px 4px rgba(229, 255, 0, 0.284);
-    
-
 }
 
 #game-screen {
@@ -119,7 +93,6 @@ span {
     border: 5px solid #FAFF06;
     border-radius: 4px;
     box-shadow:12px 12px 36px 4px rgba(229, 255, 0, 0.284);
-    
 }
 
 
@@ -142,7 +115,6 @@ span {
 
 #game-intro p {
     font-size: 18px;
-    
 }
 
 body button {
@@ -158,7 +130,6 @@ body button {
     font-weight: 600;
     letter-spacing: -0.5px;
     box-shadow:4px 8px 36px 1px rgba(229, 255, 0, 0.284);
-    
 }
 
 body button:hover{
@@ -170,7 +141,6 @@ body button:hover{
     font-size: 16px;
     border: solid 2px black;
     color: black;
-    box-shadow:4px 8px 36px 1px rgba(229, 255, 0, 0.1);
-    
+    box-shadow:4px 8px 36px 1px rgba(229, 255, 0, 0.1);   
 }
 

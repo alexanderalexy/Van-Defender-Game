@@ -33,5 +33,4 @@ updatePosition() {
     this.element.style.top = `${this.top}px`;
 }
 
-
 }

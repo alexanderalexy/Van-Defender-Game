@@ -19,9 +19,7 @@ class Player {
         this.element.style.top = `${this.top}px`
         this.element.style.left = `${this.left}px`
 
-        this.gameScreen.appendChild(this.element);
-
-        
+        this.gameScreen.appendChild(this.element); 
     }
 
     move() {
@@ -30,34 +28,23 @@ class Player {
         if(this.left < 10) {
             this.left = 10;
         }
-
         if(this.top < 0) {
-          this.top = 0;
+            this.top = 0;
       }
-
-        
-
         if (this.left > this.gameScreen.offsetWidth - this.width - 50) {
             this.left = this.gameScreen.offsetWidth - this.width - 50;
         } 
-
         if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
           this.top = this.gameScreen.offsetHeight - this.height - 10;
           }
-
-        
         this.updatePosition();
-
     }
-
-    
 
     updatePosition() {
         this.element.style.left = `${this.left}px`;
         this.element.style.top = `${this.top}px`
     }
-
-    
+ 
   didCollide(attacker) {
     const playerRect = this.element.getBoundingClientRect();
     const attackerRect = attacker.element.getBoundingClientRect();

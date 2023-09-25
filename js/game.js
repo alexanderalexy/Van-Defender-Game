@@ -12,51 +12,33 @@ class Game {
         this.win = false;
         this.score = 0;
         this.lives = 100;
-        
-        
     }
 
-    start() {
-        
-        
+ start() {
         this.startScreen.style.display = 'none';
         this.gameScreen.style.display = 'block';
         this.status.style.display = 'flex';
         this.gameLoop();
-
-      
-    
 }
-
 
 gameLoop() {
     this.update();
-
-  
     if (this.animateId % 25 === 0) {
         this.attackers.push(new Attackers(this.gameScreen));
     }
-
-    if(this.gameOver) {
-        
+    if(this.gameOver) {     
     } 
     if(this.win) {
-
     }
-    
     else {
         this.animateId = requestAnimationFrame (() => this.gameLoop());
     }
-
 }
 
-
-
 update() {
-   
     this.player.move();
     const attackersToKeep = [];
-   this.attackers.forEach(attacker => {
+    this.attackers.forEach(attacker => {
     if(this.score >= 5) {
         attacker.speed = 13;
       } 
@@ -77,8 +59,7 @@ update() {
         playCol();
         attacker.element.remove();
         this.score += 1;
-        score.textContent = parseInt(score.textContent) + 1 ;
-        
+        score.textContent = parseInt(score.textContent) + 1 ;       
     } 
 
     
@@ -89,7 +70,7 @@ update() {
             audio.play();
           }
 
-          lost()
+       lost()
        this.lives -=10;
        lives.textContent = parseInt(lives.textContent) - 10 + '%';
        console.log(this.lives)
@@ -100,26 +81,14 @@ update() {
     })
     this.attackers = attackersToKeep; 
     
-
-    
-
-
-
    if( this.lives <= 0 ) {
         this.endGame();
         this.gameOver = true;
         console.log(lost)
-    }
-
-
-    else if(this.score == 100) {
+    } else if(this.score == 100) {
         this.winGame();
-        this.win = true;
-        
-        
-      }
-
-      
+        this.win = true;   
+      }    
 }
  
     endGame() {
@@ -140,7 +109,6 @@ update() {
       }
 
      
-
       winGame() {
         this.player.element.remove();
         this.attackers.forEach(attacker => attacker.element.remove());
@@ -158,6 +126,5 @@ update() {
         this.gameWinScreen.style.display = "flex";
         
       }
-   
 }
 
